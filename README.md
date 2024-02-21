@@ -1,18 +1,18 @@
 # Project Title
 
-Date Tracker
+Dating Wrapped
 
 ## Overview
 
 What is your app? Brief description in a couple of sentences.
 
-Date Tracker is an app that allows you to track your dates throughout the year so you can explore your dating patterns.
+Dating Wrapped is an app that allows you to track your dates throughout the year so you can explore your dating patterns.
 
 ### Problem
 
 Why is your app needed? Background information around any pain points or other reasons.
 
-Dating thes days is quite exhausting so if you have an app that allows you to show your dating patterns it could help you avoid the wrong person. Looking back at your dating history can also be fun if you don't tak your dating life seriously.
+Dating these days is quite exhausting so if you have an app that allows you to show your dating patterns it could help you avoid the wrong person. Looking back at your dating history can also be fun if you don't take your dating life too seriously.
 
 ### User Profile
 
@@ -30,13 +30,29 @@ List the functionality that your app will include. These can be written as user 
 
 List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
 
-### APIs
-
-List any external sources of data that will be used in your app.
+- React
+- SCSS
+- MySQL
+- Express
+- Client libraries:
+  - react
+  - react-router
+  - axios
+- Server libraries:
+  - knex
+  - express
 
 ### Sitemap
 
 List the pages of your app with brief descriptions. You can show this visually, or write it out.
+
+- Login page (main)
+- Register page
+- User home
+- Past Dates
+- Past Date profile
+- New Person Form
+- New Date Form
 
 ### Mockups
 
@@ -44,15 +60,42 @@ Provide visuals of your app's screens. You can use tools like Figma or pictures 
 
 ### Data
 
-Describe your data and the relationships between them. You can show this visually using diagrams, or write it out.
+Users:
+Each user represents an individual who uses the Dating Wrapped app.
+Data associated with users includes:
+
+- Email
+- Password (hashed for security)
+
+Past Dates:
+Past dates represent instances of dates that users have gone on.
+
+People:
+People represent individuals whom users have dated.
+
+Relationships:
+Each user can have multiple past dates, but each past date belongs to only one user.
+Each past date can have only one partner, but each partner can be associated with multiple past dates.
 
 ### Endpoints
 
 List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
 
+GET /past-dates Retrieve a list of all past dates for the logged-in user.
+GET /past-dates/:id Retrieve details of a specific past date by its ID.
+POST /new-date Add a new date for the logged-in user.
+POST /new-person Add a new person for the logged-in user
+POST /register Add user account
+POST /login Login a user
+
 ### Auth
 
 Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.
+
+Registration: User passwords will be securely hashed and stored, and upon successful registration, a JWT will be generated and sent to the client.
+Login: Users will provide credentials for login, which will be verified by the server, and a JWT will be issued upon successful authentication.
+JWT Usage: JWTs will be securely stored in client-side local storage and included in request headers for subsequent authenticated requests, with server middleware verifying JWTs on protected routes.
+Authorization: Certain routes will be protected and require valid JWTs for access, with server-side authorization checks ensuring users can only access or modify their own data.
 
 ## Roadmap
 
@@ -61,3 +104,6 @@ Scope your project as a sprint. Break down the tasks that will need to be comple
 ## Nice-to-haves
 
 Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
+
+DELETE /past-dates/:id Delete a specific past date for the logged-in user.
+DELETE /-dates/:id Delete a specific past date for the logged-in user.

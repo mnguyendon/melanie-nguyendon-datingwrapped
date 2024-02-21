@@ -4,7 +4,13 @@
 @use "../../styles/partials/typography" as *;
 
 .header {
-  background-color: pink;
+  // background-color: rgb(243, 211, 217);
+  background: url(../../assets/wallpapers/istockphoto-1132271518-612x612.jpg);
+  // object-fit: cover;
+  // background-repeat: no-repeat;
+  // min-width: 100%;
+
+  //  rgb(250, 193, 203);
   //   height: 8.5rem;
 
   @include tablet {
@@ -48,14 +54,17 @@
   }
 
   &__button {
-    // @include h3-mobile;
     padding: 0.5rem 2.5rem;
-
-    // @include navlink-default;
-    font-weight: $regular;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    border: 2px white solid;
+    color: white;
+    background-color: rgb(253, 134, 179);
+    border-radius: 1rem;
+    font-weight: bold;
 
     &:hover {
-      //   @include navlink-default-hover;
+      @include navlink-default-hover;
     }
 
     &.active {

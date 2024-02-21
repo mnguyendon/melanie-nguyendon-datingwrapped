@@ -14,28 +14,41 @@ function Header() {
         </Link>
         <ul className="header__menu">
           <li className="header__item">
-            <Link to={`warehouses`} className="header__link">
+            <Link to={`new-date-form`} className="header__link">
               <button
                 type="submit"
                 className={
                   "header__button " +
-                  (location.pathname === "/warehouses" ? "active" : "")
+                  (location.pathname === "/new-date-form" ? "active" : "")
                 }
               >
-                Sign In
+                New Form
               </button>
             </Link>
           </li>
           <li className="header__item">
-            <Link to={`inventories`} className="header__link">
+            <Link to={`past-dates`} className="header__link">
               <button
                 type="submit"
                 className={
                   "header__button " +
-                  (location.pathname === "/inventories" ? "active" : "")
+                  (location.pathname === "/past-dates" ? "active" : "")
                 }
               >
-                Register
+                Past Dates
+              </button>
+            </Link>
+          </li>
+          <li className="header__item">
+            <Link to={`/`} className="header__link">
+              <button
+                type="submit"
+                className={
+                  "header__button " +
+                  (location.pathname === "/" ? "active" : "")
+                }
+              >
+                Sign Out
               </button>
             </Link>
           </li>

@@ -1,12 +1,16 @@
 // Font Variables
-$font-family: Titillium, sans-serif;
+$font-family: Lemonada, sans-serif;
+$light: 300; // Light
 $regular: 400; // Regular
-$semibold: 600; // Bold
+$medium: 500; //Medium
+$semibold: 600; // SemiBold
+$bold: 700; //Bold
 
 // Primary Color Variables
 $color-black: #13182c;
-$color-indigo: #2e66e5;
+$color-darkpink: #f36396;
 $color-white: #ffffff;
+$color-lightpink: #efdcdf;
 
 // Secondary Color Variables
 $color-slate: #5c667e;
@@ -15,7 +19,3 @@ $color-cloud: #bdc5d5;
 // Background Color Variables
 $color-graphite: #232940;
 $color-lightgrey: #f7f8f9;
-
-// Supporting Color Variables
-$color-green: #158463;
-$color-red: #c94515;

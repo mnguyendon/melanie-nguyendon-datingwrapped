@@ -1,0 +1,71 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+// .title {
+//   font-size: 4rem;
+//   text-align: center;
+//   color: white;
+//   padding: 1rem;
+//   background-color: rgb(96, 86, 76);
+// }
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  // background-color: rgb(252, 240, 242);
+  // background-image: url(../../assets/wallpapers/istockphoto-1132271518-612x612.jpg);
+
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  @include desktop {
+    padding: 1rem 5rem;
+  }
+
+  &__container {
+    padding: 1em 0;
+    float: left;
+    width: 50%;
+  }
+
+  @media screen and (max-width: 640px) {
+    .main__container {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    .main__container {
+      width: 33.33333%;
+    }
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+
+    &__button {
+      border-radius: 100%;
+      width: 15rem;
+      height: 15rem;
+
+      padding: 0.5rem 2.5rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      border: 2px white solid;
+      background-color: white;
+      color: $color-darkpink;
+
+      font-weight: bold;
+
+      // background: url(../../assets/wallpapers/istockphoto-1132271518-612x612.jpg);
+    }
+  }
+}

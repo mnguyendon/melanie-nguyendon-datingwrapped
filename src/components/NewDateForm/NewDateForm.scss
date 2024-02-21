@@ -1,0 +1,31 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+form {
+  border: 3px black solid;
+}
+
+.form {
+  &__section {
+    @include tablet {
+      @include flexbox;
+    }
+  }
+
+  &__questions {
+    margin-bottom: 1rem;
+
+    &-container {
+      margin: 1rem;
+      @include tablet {
+        width: 50%;
+      }
+    }
+  }
+
+  &__input {
+    margin-left: 1rem;
+  }
+}
