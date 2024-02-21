@@ -1,0 +1,50 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.home {
+  background-color: $color-lightpink;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: center;
+    gap: 8rem;
+  }
+
+  &__button {
+    background-color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 50%;
+    height: 15rem;
+    width: 15rem;
+    border: none;
+
+    &:hover {
+      box-shadow: 0 0 20px 10px rgba(237, 107, 146, 0.5);
+    }
+
+    &-person {
+      margin-top: 2rem;
+
+      @include tablet {
+        margin: 11rem 0;
+        padding: 5rem;
+      }
+    }
+
+    &-date {
+      margin-bottom: 2rem;
+
+      @include tablet {
+        margin: 11rem 0;
+        padding: 5rem;
+      }
+    }
+  }
+}

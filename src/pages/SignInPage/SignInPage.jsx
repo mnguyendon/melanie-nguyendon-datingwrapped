@@ -23,7 +23,7 @@ function SignInPage() {
             className="form-control-material"
             required
           />
-          <label className="form__label" for="username">
+          <label className="login-form__label" for="username">
             Username
           </label>
         </div>
@@ -37,7 +37,7 @@ function SignInPage() {
             className="form-control-material"
             required
           />
-          <label className="form__label" for="password">
+          <label className="login-form__label" for="password">
             Password
           </label>
         </div>

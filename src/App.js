@@ -5,7 +5,8 @@ import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage/HomePage";
 import SignInPage from "./pages/SignInPage/SignInPage";
 // import AllMonthsPage from "./pages/AllMonthsPage/AllMonthsPage";
-import NewDateFormPage from "./components/NewDateForm/NewDateForm";
+import NewDateFormPage from "./pages/NewDateFormPage/NewDateFormPage";
+import NewPersonFormPage from "./pages/NewPersonFormPage/NewPersonFormPage";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/register" element={<RegisterPage />} /> */}
         {/* <Route path="/all-months" element={<AllMonthsPage />} /> */}
-        <Route path="/new-date-form" element={<NewDateFormPage />} />
+        <Route path="/new-date" element={<NewDateFormPage />} />
+        <Route path="/new-person" element={<NewPersonFormPage />} />
         {/* <Route path="/all-months/{month}" element={<MonthPage />} /> */}
         {/* <Route path="/all-months/{month}/form" element={<FormPage />} /> */}
       </Routes>
