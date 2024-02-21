@@ -10,21 +10,11 @@ function Header() {
     <header className="header">
       <nav className="header__navigation">
         <Link to={`/`} className="header__logo">
-          <img className="header__image" alt="dating wrapped logo" src="" />
+          <p className="header__logo-dw">❤ DATING WRAPPED</p>
         </Link>
         <ul className="header__menu">
           <li className="header__item">
-            <Link to={`new-date-form`} className="header__link">
-              <button
-                type="submit"
-                className={
-                  "header__button " +
-                  (location.pathname === "/new-date-form" ? "active" : "")
-                }
-              >
-                New Form
-              </button>
-            </Link>
+            <Link to={`new-date-form`} className="header__link"></Link>
           </li>
           <li className="header__item">
             <Link to={`past-dates`} className="header__link">
