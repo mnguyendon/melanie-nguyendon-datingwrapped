@@ -7,22 +7,22 @@ import SignInPage from "./pages/SignInPage/SignInPage";
 // import AllMonthsPage from "./pages/AllMonthsPage/AllMonthsPage";
 import NewDateFormPage from "./pages/NewDateFormPage/NewDateFormPage";
 import NewPersonFormPage from "./pages/NewPersonFormPage/NewPersonFormPage";
+import PersonDetailsPage from "./pages/PersonDetailsPage/PersonDetailsPage";
+import PastDatesPage from "./pages/PastDatesPage/PastDatesPage";
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <Header /> */}
       <Routes>
         <Route path="/sign-in" element={<SignInPage />} />
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/register" element={<RegisterPage />} /> */}
-        {/* <Route path="/all-months" element={<AllMonthsPage />} /> */}
         <Route path="/new-date" element={<NewDateFormPage />} />
         <Route path="/new-person" element={<NewPersonFormPage />} />
-        {/* <Route path="/all-months/{month}" element={<MonthPage />} /> */}
-        {/* <Route path="/all-months/{month}/form" element={<FormPage />} /> */}
+        <Route path="/past-dates" element={<PastDatesPage />} />
+        <Route path="/past-dates/:id" element={<PersonDetailsPage />} />
+        {/* <Route path="/register" element={<RegisterPage />} /> */}
+        {/* <Route path="/all-months" element={<AllMonthsPage />} /> */}
       </Routes>
-      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

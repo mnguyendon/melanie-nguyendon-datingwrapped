@@ -17,27 +17,15 @@ function Header() {
             <Link to={`new-date-form`} className="header__link"></Link>
           </li>
           <li className="header__item">
-            <Link to={`past-dates`} className="header__link">
-              <button
-                type="submit"
-                className={
-                  "header__button " +
-                  (location.pathname === "/past-dates" ? "active" : "")
-                }
-              >
+            <Link to={`/past-dates`} className="header__link">
+              <button type="submit" className="header__button">
                 Past Dates
               </button>
             </Link>
           </li>
           <li className="header__item">
-            <Link to={`/`} className="header__link">
-              <button
-                type="submit"
-                className={
-                  "header__button " +
-                  (location.pathname === "/" ? "active" : "")
-                }
-              >
+            <Link to={`/sign-in`} className="header__link">
+              <button type="submit" className={"header__button"}>
                 Sign Out
               </button>
             </Link>

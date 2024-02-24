@@ -5,6 +5,7 @@
 
 .home {
   background-color: $color-lightpink;
+  // background-image: url(../../assets/wallpapers/heartwallpaper.jpeg);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -18,12 +19,15 @@
 
   &__button {
     background-color: white;
+    // background-image: url(../../assets/wallpapers/istockphoto-1132271518-612x612.jpg);
+    // object-fit: fill;
     font-weight: bold;
     font-size: 1rem;
     border-radius: 50%;
     height: 15rem;
     width: 15rem;
     border: none;
+    // color: $color-darkpink;
 
     &:hover {
       box-shadow: 0 0 20px 10px rgba(237, 107, 146, 0.5);

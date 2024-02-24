@@ -25,6 +25,7 @@
     color: $color-darkpink;
     padding-bottom: 2rem;
     margin: 0;
+    color: black;
 
     @include tablet {
       text-align: start;
@@ -38,6 +39,7 @@
     &-register {
       font-weight: bold;
       font-style: italic;
+      color: $color-darkpink;
     }
   }
 

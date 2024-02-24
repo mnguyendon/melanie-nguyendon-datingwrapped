@@ -23,6 +23,7 @@ function NewPersonForm() {
                     <option>Talking</option>
                     <option>Complicated</option>
                     <option>FWB</option>
+                    <option>Friends</option>
                     <option>Exclusive</option>
                     <option>Relationship</option>
                     <option>Over</option>
@@ -38,6 +39,7 @@ function NewPersonForm() {
                     <option>Mutual Friend</option>
                     <option>School</option>
                     <option>Work</option>
+                    <option>Gym</option>
                     <option>Bar/Club</option>
                     <option>In the Wild</option>
                   </select>
@@ -152,12 +154,12 @@ function NewPersonForm() {
             </div>
           </section>
 
-          <div className="form__button__container">
+          <div className="form__button-container">
             <button type="cancel" className="form__button-cancel">
               CANCEL
             </button>
-            <button type="submit" className="form__button-save">
-              SAVE
+            <button type="submit" className="form__button-submit">
+              SUBMIT
             </button>
           </div>
         </form>

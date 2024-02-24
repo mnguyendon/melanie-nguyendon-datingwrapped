@@ -1,0 +1,26 @@
+[
+  {
+    "id": "001",
+    "date": "2023-01-23",
+    "date-number": 1,
+    "activity": "Dinner",
+    "paid": "Them",
+    "family": "No",
+    "friend": "No",
+    "cry": "0",
+    "end": "Me",
+    "other": "N/A"
+  },
+  {
+    "id": "002",
+    "date": "2023-01-27",
+    "date-number": 1,
+    "activity": "Park",
+    "paid": "No $$ Spent",
+    "family": "No",
+    "friend": "No",
+    "cry": "0",
+    "end": "Still Ongoing",
+    "other": "N/A"
+  }
+]

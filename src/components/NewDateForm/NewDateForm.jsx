@@ -131,51 +131,15 @@ function NewDateForm() {
                   {"No"}
                 </div>
                 <div className="form__questions">
-                  <label className="radio__label">
-                    How many times did they make you cry?
-                  </label>
+                  <label className="form__label">Cry count</label>
                   <input
-                    type="radio"
+                    className="form__input"
+                    type="number"
+                    id="cry"
                     name="cry"
-                    className="radio__button"
-                    required
+                    min="0"
+                    max="1000"
                   />
-                  {"0"}
-                  <input
-                    type="radio"
-                    name="cry"
-                    className="radio__button"
-                    required
-                  />
-                  {"1"}
-                  <input
-                    type="radio"
-                    name="cry"
-                    className="radio__button"
-                    required
-                  />
-                  {"2"}
-                  <input
-                    type="radio"
-                    name="cry"
-                    className="radio__button"
-                    required
-                  />
-                  {"3"}
-                  <input
-                    type="radio"
-                    name="cry"
-                    className="radio__button"
-                    required
-                  />
-                  {"4"}
-                  <input
-                    type="radio"
-                    name="cry"
-                    className="radio__button"
-                    required
-                  />
-                  {"5+"}
                 </div>
                 <div className="form__questions">
                   <label htmlFor="category" className="form__label">
@@ -205,12 +169,12 @@ function NewDateForm() {
             </div>
           </section>
 
-          <div className="form__button__container">
+          <div className="form__button-container">
             <button type="cancel" className="form__button-cancel">
               CANCEL
             </button>
-            <button type="submit" className="form__button-save">
-              SAVE
+            <button type="submit" className="form__button-submit">
+              SUBMIT
             </button>
           </div>
         </form>
