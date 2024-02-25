@@ -9,6 +9,7 @@ import NewDateFormPage from "./pages/NewDateFormPage/NewDateFormPage";
 import NewPersonFormPage from "./pages/NewPersonFormPage/NewPersonFormPage";
 import PersonDetailsPage from "./pages/PersonDetailsPage/PersonDetailsPage";
 import PastDatesPage from "./pages/PastDatesPage/PastDatesPage";
+import WrappedPage from "./pages/WrappedPage/WrappedPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/new-person" element={<NewPersonFormPage />} />
         <Route path="/past-dates" element={<PastDatesPage />} />
         <Route path="/past-dates/:id" element={<PersonDetailsPage />} />
+        <Route path="/wrapped" element={<WrappedPage />} />
         {/* <Route path="/register" element={<RegisterPage />} /> */}
         {/* <Route path="/all-months" element={<AllMonthsPage />} /> */}
       </Routes>

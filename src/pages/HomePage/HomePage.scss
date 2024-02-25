@@ -3,6 +3,111 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
+.heart__text {
+  font-size: 0.6rem;
+  display: flex;
+  text-align: center;
+  align-content: center;
+  // background-color: pink;
+  color: white;
+  position: relative;
+  max-width: 7rem;
+  top: 22%;
+  left: 22%;
+  // border: 0.25rem white dotted;
+  border-radius: 1rem;
+  padding: 0.25rem;
+
+  &:hover {
+    color: $color-darkpink;
+  }
+}
+
+.heart__link {
+  text-decoration: none;
+}
+
+.heart__wrapper {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+/* Heart Style */
+.heart {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: $color-darkpink;
+  top: 50px;
+  left: 50px;
+  border: none;
+  transform: rotate(45deg);
+}
+
+.heart:focus {
+  outline: none;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: $color-darkpink;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: -50px;
+}
+
+/* Beat Style */
+.heart__beat {
+  height: 100px;
+  width: 100px;
+  background-color: $color-darkpink;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  transform: rotate(45deg);
+  transition: all 0.2s;
+}
+
+.heart__beat::before,
+.heart__beat::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: $color-darkpink;
+  border-radius: 50%;
+}
+
+.heart__beat::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart__beat::after {
+  top: 0;
+  left: -50px;
+}
+
+/* Heart beat effect */
+.heart__beat:hover {
+  transform: rotate(45deg) scale(1.2);
+  opacity: 0;
+  cursor: pointer;
+}
+
 .home {
   background-color: $color-lightpink;
   // background-image: url(../../assets/wallpapers/heartwallpaper.jpeg);

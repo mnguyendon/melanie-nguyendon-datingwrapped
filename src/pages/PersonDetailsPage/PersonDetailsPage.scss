@@ -1,0 +1,26 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.person-profile {
+  background-color: $color-lightpink;
+  padding: 0 3rem;
+  display: flex;
+  justify-content: space-evenly;
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+    background-color: $color-lightpink;
+  }
+
+  &__title {
+    margin: 0;
+    padding-top: 1rem;
+    color: white;
+    font-size: 4rem;
+  }
+}

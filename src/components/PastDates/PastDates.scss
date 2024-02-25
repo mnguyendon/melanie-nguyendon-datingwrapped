@@ -33,7 +33,10 @@
 .past-dates {
   &__title {
     color: $color-darkpink;
+    font-size: 3.5rem;
+    padding-left: 2rem;
   }
+
   &__container {
     background-color: $color-lightpink;
     border: 0.5rem white double;

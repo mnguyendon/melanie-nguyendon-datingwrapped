@@ -25,7 +25,6 @@ function NewPersonForm() {
                     <option>FWB</option>
                     <option>Friends</option>
                     <option>Exclusive</option>
-                    <option>Relationship</option>
                     <option>Over</option>
                   </select>
                 </div>
@@ -94,18 +93,19 @@ function NewPersonForm() {
                       placeholder="Name"
                     ></input>
                   </div>
+
                   <div className="form__questions">
-                    <label htmlFor="item_name" className="form__label">
-                      Age
-                    </label>
+                    <label className="form__label">Age</label>
                     <input
-                      type="text"
-                      name="item_name"
                       className="form__input"
-                      placeholder="Age"
-                    ></input>
+                      type="number"
+                      id="cry"
+                      name="cry"
+                      min="0"
+                      max="1000"
+                    />
                   </div>
-                  <div className="form__questions">
+                  {/* <div className="form__questions">
                     <label htmlFor="item_name" className="form__label">
                       Height
                     </label>
@@ -115,6 +115,40 @@ function NewPersonForm() {
                       className="form__input"
                       placeholder="Height"
                     ></input>
+                  </div> */}
+                  <div className="form__questions">
+                    <label htmlFor="category" className="form__label">
+                      Height
+                    </label>
+                    <select name="category" className="form__input">
+                      <option>Please Select</option>
+                      <option> &lt; 5'0</option>
+                      <option>5'0</option>
+                      <option>5'1</option>
+                      <option>5'2</option>
+                      <option>5'3</option>
+                      <option>5'4</option>
+                      <option>5'5</option>
+                      <option>5'6</option>
+                      <option>5'7</option>
+                      <option>5'8</option>
+                      <option>5'9</option>
+                      <option>5'10</option>
+                      <option>5'11</option>
+                      <option>6'0</option>
+                      <option>6'1</option>
+                      <option>6'2</option>
+                      <option>6'3</option>
+                      <option>6'4</option>
+                      <option>6'5</option>
+                      <option>6'6</option>
+                      <option>6'7</option>
+                      <option>6'8</option>
+                      <option>6'9</option>
+                      <option>6'10</option>
+                      <option>6'11</option>
+                      <option>&gt; 6'11</option>
+                    </select>
                   </div>
                   <div className="form__questions">
                     <label htmlFor="item_name" className="form__label">
@@ -128,32 +162,46 @@ function NewPersonForm() {
                     ></input>
                   </div>
                   <div className="form__questions">
-                    <label htmlFor="item_name" className="form__label">
+                    <label htmlFor="category" className="form__label">
                       Starsign
                     </label>
-                    <input
-                      type="text"
-                      name="item_name"
-                      className="form__input"
-                      placeholder="Starsign"
-                    ></input>
+                    <select name="category" className="form__input">
+                      <option>Please Select</option>
+                      <option>Capricorn</option>
+                      <option>Aquarius</option>
+                      <option>Pisces</option>
+                      <option>Aries</option>
+                      <option>Taurus</option>
+                      <option>Gemini</option>
+                      <option>Cancer</option>
+                      <option>Leo</option>
+                      <option>Virgo</option>
+                      <option>Libra</option>
+                      <option>Scorpio</option>
+                      <option>Sagittarius</option>
+                    </select>
                   </div>
                   <div className="form__questions">
-                    <label htmlFor="item_name" className="form__label">
+                    <label htmlFor="category" className="form__label">
                       Ethnicity
                     </label>
-                    <input
-                      type="text"
-                      name="item_name"
-                      className="form__input"
-                      placeholder="Ethnicity"
-                    ></input>
+                    <select name="category" className="form__input">
+                      <option>Please Select</option>
+                      <option>Aboriginal/Indigenous</option>
+                      <option>Black/African Descent</option>
+                      <option>East Asian</option>
+                      <option>Hispanic/Latino</option>
+                      <option>Middle Eastern</option>
+                      <option>Native Hawaiian/Pacific Islander</option>
+                      <option>South Asian</option>
+                      <option>Southeast Asian</option>
+                      <option>White/Caucasian</option>
+                    </select>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-
           <div className="form__button-container">
             <button type="cancel" className="form__button-cancel">
               CANCEL

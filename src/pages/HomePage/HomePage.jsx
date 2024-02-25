@@ -13,6 +13,20 @@ function HomePage() {
             NEW PERSON
           </button>
         </Link>
+        <div className="test">
+          {/* <p className="heart__text">
+            Click the heart to view your dating wrapped!
+          </p> */}
+          <Link to={`/wrapped`} className="heart__link">
+            <div className="heart__wrapper">
+              <button className="heart"></button>
+              <div className="heart__beat"></div>
+              <p className="heart__text">
+                Click here to view your dating wrapped!
+              </p>
+            </div>
+          </Link>
+        </div>
         <Link to={`/new-date`} className="">
           <button className="home__button home__button-date">NEW DATE</button>
         </Link>
