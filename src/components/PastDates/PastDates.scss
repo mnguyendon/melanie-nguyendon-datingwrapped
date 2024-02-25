@@ -10,8 +10,7 @@
 
   &-specific:hover {
     box-shadow: inset 0 0 0 1000px rgba(172, 144, 157, 0.2);
-    // background-color: white;
-    // opacity: 90%;
+    color: white;
   }
 
   &__link {
@@ -21,12 +20,17 @@
   &__category {
     color: $color-darkpink;
     max-width: 2rem;
+    font-size: 2rem;
 
-    &-title {
-      color: $color-darkpink;
-      text-decoration: underline;
-      max-width: 2rem;
+    &:hover {
+      color: white;
     }
+
+    // &-title {
+    //   color: $color-darkpink;
+    //   text-decoration: underline;
+    //   max-width: 2rem;
+    // }
   }
 }
 

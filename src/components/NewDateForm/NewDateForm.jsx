@@ -23,51 +23,6 @@ function NewDateForm() {
                     required
                   />
                 </div>
-                <div className="form__questions">
-                  <label className="radio__label">Date Number</label>
-                  <input
-                    type="radio"
-                    name="status"
-                    className="radio__button"
-                    required
-                  />
-                  {"1"}
-                  <input
-                    type="radio"
-                    name="status"
-                    className="radio__button"
-                    required
-                  />
-                  {"2"}
-                  <input
-                    type="radio"
-                    name="status"
-                    className="radio__button"
-                    required
-                  />
-                  {"3"}
-                  <input
-                    type="radio"
-                    name="status"
-                    className="radio__button"
-                    required
-                  />
-                  {"4"}
-                  <input
-                    type="radio"
-                    name="status"
-                    className="radio__button"
-                    required
-                  />
-                  {"5"}
-                  <input
-                    type="radio"
-                    name="status"
-                    className="radio__button"
-                    required
-                  />
-                  {"6+"}
-                </div>
 
                 <div className="form__questions">
                   <label htmlFor="item_name" className="form__label">
@@ -170,9 +125,11 @@ function NewDateForm() {
           </section>
 
           <div className="form__button-container">
-            <button type="cancel" className="form__button-cancel">
-              CANCEL
-            </button>
+            <Link className="item__cancel-button--link" to={`/`}>
+              <button type="cancel" className="form__button-cancel">
+                CANCEL
+              </button>
+            </Link>
             <button type="submit" className="form__button-submit">
               SUBMIT
             </button>

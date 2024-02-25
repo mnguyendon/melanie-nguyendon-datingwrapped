@@ -28,6 +28,7 @@ form {
   &__title {
     display: flex;
     justify-content: center;
+    padding-bottom: 1rem;
   }
 
   &__container {
@@ -43,7 +44,7 @@ form {
   }
 
   &__questions {
-    padding-bottom: 1rem;
+    padding-bottom: 1.25rem;
   }
 
   &__label {

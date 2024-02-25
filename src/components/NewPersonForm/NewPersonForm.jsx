@@ -1,5 +1,8 @@
 import "./NewPersonForm.scss";
-// import { Link } from "react-router-dom";
+import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 // import { useState, useEffect } from "react";
 // import axios from "axios";
@@ -203,9 +206,11 @@ function NewPersonForm() {
             </div>
           </section>
           <div className="form__button-container">
-            <button type="cancel" className="form__button-cancel">
-              CANCEL
-            </button>
+            <Link className="item__cencel-button--link" to={`/`}>
+              <button type="cancel" className="form__button-cancel">
+                CANCEL
+              </button>
+            </Link>
             <button type="submit" className="form__button-submit">
               SUBMIT
             </button>

@@ -6,6 +6,7 @@
 .person-profile {
   background-color: $color-lightpink;
   padding: 0 3rem;
+  padding-bottom: 2rem;
   display: flex;
   justify-content: space-evenly;
 
@@ -22,5 +23,24 @@
     padding-top: 1rem;
     color: white;
     font-size: 4rem;
+  }
+
+  &__status {
+    font-weight: bold;
+  }
+}
+
+.prev-date {
+  background-color: $color-lightpink;
+  padding: 1rem 2rem;
+  border: 0.5rem white double;
+
+  &__container {
+    display: flex;
+    gap: 7rem;
+  }
+
+  &__category {
+    font-size: 0.75rem;
   }
 }
