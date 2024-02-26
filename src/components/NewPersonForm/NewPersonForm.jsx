@@ -1,18 +1,56 @@
 import "./NewPersonForm.scss";
 import React, { useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 // import { useState, useEffect } from "react";
 // import axios from "axios";
 // const { REACT_APP_API_BASE_PATH } = process.env;
 
 function NewPersonForm() {
+  const formRef = useRef();
+  const navigate = useNavigate();
+
+  const submitForm = async (e) => {
+    try {
+      e.preventDefault();
+      const form = formRef.current;
+
+      const name = form.name.value;
+      const age = form.age.value;
+      const height = form.height.value;
+      const occupation = form.occupation.value;
+      const starsign = form.starsign.value;
+      const ethnicity = form.ethnicity.value;
+      const status = form.status.value;
+      const met = form.met.value;
+      const face = form.face.value;
+      const personality = form.personality.value;
+
+      const data = {
+        name,
+        age,
+        height,
+        occupation,
+        starsign,
+        ethnicity,
+        status,
+        met,
+        face,
+        personality,
+      };
+      const res = await axios.post("http://localhost:5050/past-dates", data);
+      alert("Person added successfully");
+      navigate("/past-dates");
+    } catch (error) {
+      console.error("error adding new person", error);
+    }
+  };
+
   return (
     <>
       <main>
-        <form>
+        <form className="new-person__form" ref={formRef} onSubmit={submitForm}>
           <section className="form">
             <h2 className="form__title">New Person</h2>
             <div className="form__container">
@@ -21,7 +59,7 @@ function NewPersonForm() {
                   <label htmlFor="category" className="form__label">
                     Status
                   </label>
-                  <select name="category" className="form__input">
+                  <select id="status" name="category" className="form__input">
                     <option>Please Select</option>
                     <option>Talking</option>
                     <option>Complicated</option>
@@ -35,7 +73,7 @@ function NewPersonForm() {
                   <label htmlFor="category" className="form__label">
                     How Did You Meet?
                   </label>
-                  <select name="category" className="form__input">
+                  <select id="met" name="category" className="form__input">
                     <option>Please Select</option>
                     <option>Dating App</option>
                     <option>Mutual Friend</option>
@@ -50,7 +88,7 @@ function NewPersonForm() {
                   <label htmlFor="category" className="form__label">
                     Face Rating
                   </label>
-                  <select name="category" className="form__input">
+                  <select id="face" name="category" className="form__input">
                     <option>Please Select</option>
                     <option>1</option>
                     <option>2</option>
@@ -68,7 +106,11 @@ function NewPersonForm() {
                   <label htmlFor="category" className="form__label">
                     Personality Rating
                   </label>
-                  <select name="category" className="form__input">
+                  <select
+                    id="personality"
+                    name="category"
+                    className="form__input"
+                  >
                     <option>Please Select</option>
                     <option>1</option>
                     <option>2</option>
@@ -90,6 +132,7 @@ function NewPersonForm() {
                       Name
                     </label>
                     <input
+                      id="name"
                       type="text"
                       name="item_name"
                       className="form__input"
@@ -102,28 +145,18 @@ function NewPersonForm() {
                     <input
                       className="form__input"
                       type="number"
-                      id="cry"
-                      name="cry"
+                      id="age"
+                      name="age"
                       min="0"
                       max="1000"
                     />
                   </div>
-                  {/* <div className="form__questions">
-                    <label htmlFor="item_name" className="form__label">
-                      Height
-                    </label>
-                    <input
-                      type="text"
-                      name="item_name"
-                      className="form__input"
-                      placeholder="Height"
-                    ></input>
-                  </div> */}
+
                   <div className="form__questions">
                     <label htmlFor="category" className="form__label">
                       Height
                     </label>
-                    <select name="category" className="form__input">
+                    <select id="height" name="category" className="form__input">
                       <option>Please Select</option>
                       <option> &lt; 5'0</option>
                       <option>5'0</option>
@@ -158,6 +191,7 @@ function NewPersonForm() {
                       Occupation
                     </label>
                     <input
+                      id="occupation"
                       type="text"
                       name="item_name"
                       className="form__input"
@@ -168,7 +202,11 @@ function NewPersonForm() {
                     <label htmlFor="category" className="form__label">
                       Starsign
                     </label>
-                    <select name="category" className="form__input">
+                    <select
+                      id="starsign"
+                      name="category"
+                      className="form__input"
+                    >
                       <option>Please Select</option>
                       <option>Capricorn</option>
                       <option>Aquarius</option>
@@ -188,7 +226,11 @@ function NewPersonForm() {
                     <label htmlFor="category" className="form__label">
                       Ethnicity
                     </label>
-                    <select name="category" className="form__input">
+                    <select
+                      id="ethnicity"
+                      name="category"
+                      className="form__input"
+                    >
                       <option>Please Select</option>
                       <option>Aboriginal/Indigenous</option>
                       <option>Black/African Descent</option>
