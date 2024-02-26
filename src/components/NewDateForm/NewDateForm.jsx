@@ -1,12 +1,51 @@
 import "./NewDateForm.scss";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 // const { REACT_APP_API_BASE_PATH } = process.env;
 
 function NewDateForm() {
   const [currentPeople, setCurrentPeople] = useState([]);
+  const formRef = useRef();
+  const navigate = useNavigate();
+
+  const submitForm = async (e) => {
+    try {
+      e.preventDefault();
+      const form = formRef.current;
+
+      const personId = form.name.value;
+      const date = form.date.value;
+      const activity = form.activity.value;
+      const paid = form.paid.value;
+      const family = form.family.value;
+      const friend = form.friend.value;
+      const cry = form.cry.value;
+      const end = form.end.value;
+      const other = form.other.value;
+
+      const data = {
+        "person-id": personId,
+        date,
+        activity,
+        paid,
+        family,
+        friend,
+        cry,
+        end,
+        other,
+      };
+      const res = await axios.post(
+        "http://localhost:5050/past-dates/details",
+        data
+      );
+      alert("Date added successfully");
+      navigate("/past-dates");
+    } catch (error) {
+      console.error("error adding new person", error);
+    }
+  };
 
   const apiUrl = "http://localhost:5050/past-dates";
 
@@ -26,7 +65,7 @@ function NewDateForm() {
   return (
     <>
       <main>
-        <form>
+        <form ref={formRef} onSubmit={submitForm}>
           <section className="form">
             <h2 className="form__section__title">New Date</h2>
             <div className="form__section">
@@ -35,15 +74,16 @@ function NewDateForm() {
                   <label htmlFor="category" className="form__label">
                     Name
                   </label>
-                  <select name="category" className="form__input">
+                  <select id="name" name="category" className="form__input">
                     {currentPeople.map((person) => (
-                      <option>{person.name}</option>
+                      <option value={person.id}>{person.name}</option>
                     ))}
                   </select>
                 </div>
                 <div className="form__questions">
                   <label className="form__label">Date</label>
                   <input
+                    id="date"
                     type="date"
                     name="status"
                     className="date__input"
@@ -56,6 +96,7 @@ function NewDateForm() {
                     What did you do?
                   </label>
                   <input
+                    id="activity"
                     type="text"
                     name="item_name"
                     className="form__input"
@@ -66,7 +107,7 @@ function NewDateForm() {
                   <label htmlFor="category" className="form__label">
                     Who Paid?
                   </label>
-                  <select name="category" className="form__input">
+                  <select id="paid" name="category" className="form__input">
                     <option>Please Select</option>
                     <option>Me</option>
                     <option>Them</option>
@@ -79,6 +120,7 @@ function NewDateForm() {
                     Did you meet their family?
                   </label>
                   <input
+                    id="family"
                     type="radio"
                     name="family"
                     className="radio__button"
@@ -98,6 +140,7 @@ function NewDateForm() {
                     Did you meet their friends?
                   </label>
                   <input
+                    id="friend"
                     type="radio"
                     name="friends"
                     className="radio__button"
@@ -127,7 +170,7 @@ function NewDateForm() {
                   <label htmlFor="category" className="form__label">
                     Who Ended Things?
                   </label>
-                  <select name="category" className="form__input">
+                  <select id="end" name="category" className="form__input">
                     <option>Please Select</option>
                     <option>Me</option>
                     <option>Them</option>
@@ -141,6 +184,7 @@ function NewDateForm() {
                     Other Comments
                   </label>
                   <textarea
+                    id="other"
                     type="text"
                     name="description"
                     className="form__input custom__input"
