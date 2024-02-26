@@ -6,7 +6,7 @@ import axios from "axios";
 function PastDates() {
   const [currentPeople, setCurrentPeople] = useState([]);
 
-  const apiUrl = "http://localhost:5050/past-dates";
+  const apiUrl = "http://localhost:5050/person";
 
   const personData = async () => {
     try {

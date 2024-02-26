@@ -26,7 +26,7 @@ function PersonDetails({ currentPeople }) {
   const saveEdits = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:5050/past-dates/${personInfo.id}`,
+        `http://localhost:5050/person/${personInfo.id}`,
         personInfo
       );
       setEditMode(false);

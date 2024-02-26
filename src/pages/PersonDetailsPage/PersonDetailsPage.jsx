@@ -10,7 +10,7 @@ function PersonDetailsPage() {
   const [currentPeople, setCurrentPeople] = useState([]);
   const [dateDetails, setDateDetails] = useState([]);
 
-  const apiUrl = "http://localhost:5050/past-dates";
+  const apiUrl = "http://localhost:5050/person";
   const apiUrl2 = "http://localhost:5050/past-dates/details";
 
   const personData = async () => {

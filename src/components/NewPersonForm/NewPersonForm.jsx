@@ -39,7 +39,7 @@ function NewPersonForm() {
         face,
         personality,
       };
-      const res = await axios.post("http://localhost:5050/past-dates", data);
+      const res = await axios.post("http://localhost:5050/person", data);
       alert("Person added successfully");
       navigate("/past-dates");
     } catch (error) {
