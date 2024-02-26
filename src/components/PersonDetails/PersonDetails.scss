@@ -12,10 +12,10 @@
   &__test {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1rem;
   }
 
   &__title {
-    padding-bottom: 1rem;
     color: $color-darkpink;
     text-decoration: underline;
   }
@@ -27,6 +27,7 @@
   &__container {
     display: flex;
     gap: 5rem;
+    background-color: white;
   }
 
   &__content {
@@ -41,7 +42,8 @@
 .item {
   &__button {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
 
     &--link {
       text-decoration: none;

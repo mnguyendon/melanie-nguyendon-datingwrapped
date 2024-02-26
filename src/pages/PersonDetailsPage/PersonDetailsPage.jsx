@@ -69,20 +69,34 @@ function PersonDetailsPage() {
         <div className="prev-date__container">
           {personDateDetails.map((date) => (
             <div key={date.id} className="prev-date__category">
-              <h3>Date</h3>
-              <p>{date.date}</p>
-              <h3>Activity</h3>
-              <p>{date.activity}</p>
-              <h3>Paid</h3>
-              <p>{date.paid}</p>
-              <h3>Met Family?</h3>
-              <p>{date.family}</p>
-              <h3>Met Friends?</h3>
-              <p>{date.friend}</p>
-              <h3>Cry Count</h3>
-              <p>{date.cry}</p>
-              <h3>Other</h3>
-              <p>{date.other}</p>
+              <div className="prev-date__box">
+                <h3>Date</h3>
+                <p>{date.date}</p>
+              </div>
+              <div className="prev-date__box">
+                <h3>Activity</h3>
+                <p>{date.activity}</p>
+              </div>
+              <div className="prev-date__box">
+                <h3>Paid</h3>
+                <p>{date.paid}</p>
+              </div>
+              <div className="prev-date__box">
+                <h3>Met Family?</h3>
+                <p>{date.family}</p>
+              </div>
+              <div className="prev-date__box">
+                <h3>Met Friends?</h3>
+                <p>{date.friend}</p>
+              </div>
+              <div className="prev-date__box">
+                <h3>Cry Count</h3>
+                <p>{date.cry}</p>
+              </div>
+              <div className="prev-date__box">
+                <h3>Other</h3>
+                <p>{date.other}</p>
+              </div>
             </div>
           ))}
         </div>

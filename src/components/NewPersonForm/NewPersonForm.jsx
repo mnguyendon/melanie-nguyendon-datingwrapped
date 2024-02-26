@@ -220,6 +220,7 @@ function NewPersonForm() {
                       <option>Libra</option>
                       <option>Scorpio</option>
                       <option>Sagittarius</option>
+                      <option>Not Sure</option>
                     </select>
                   </div>
                   <div className="form__questions">
