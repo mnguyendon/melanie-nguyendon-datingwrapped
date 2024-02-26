@@ -8,7 +8,9 @@ function SignInPage() {
         <h1 className="main__header">DATING WRAPPED</h1>
         <p className="main__description">
           The site where you can{" "}
-          <span className="main__description-register">Register Here</span>
+          <span className="main__description-register">
+            analyze your dating data!
+          </span>
         </p>
       </div>
 

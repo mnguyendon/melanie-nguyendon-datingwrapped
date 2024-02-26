@@ -50,7 +50,12 @@ function NewPersonForm() {
   return (
     <>
       <main>
-        <form className="new-person__form" ref={formRef} onSubmit={submitForm}>
+        <form
+          autocomplete="off"
+          className="new-person__form"
+          ref={formRef}
+          onSubmit={submitForm}
+        >
           <section className="form">
             <h2 className="form__title">New Person</h2>
             <div className="form__container">

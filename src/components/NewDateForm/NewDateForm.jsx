@@ -65,7 +65,7 @@ function NewDateForm() {
   return (
     <>
       <main>
-        <form ref={formRef} onSubmit={submitForm}>
+        <form autocomplete="off" ref={formRef} onSubmit={submitForm}>
           <section className="form">
             <h2 className="form__title">New Date</h2>
             <div className="form__section">
