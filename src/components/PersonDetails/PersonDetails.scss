@@ -9,10 +9,10 @@
   background-color: white;
   padding: 1rem;
 
-  // &__wrap {
-  //   display: flex;
-  //   justify-content: space-between;
-  // }
+  &__test {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__title {
     padding-bottom: 1rem;
@@ -39,9 +39,14 @@
 }
 
 .item {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
+  &__button {
+    display: flex;
+    gap: 1rem;
+
+    &--link {
+      text-decoration: none;
+    }
+  }
 
   &__delete-button {
     display: flex;
@@ -57,9 +62,7 @@
   }
 
   &__edit-button {
-    @include flexbox;
-    justify-content: flex-end;
-    // align-items: center;
+    display: flex;
     border: none;
     background-color: $color-darkpink;
     border-radius: 10rem;
@@ -68,21 +71,11 @@
       border-radius: 20px;
       padding: 0.5rem 1rem;
       gap: 0.5rem;
-
-      // &:hover {
-      //   // @include button-tablet-hover;
-      // }
     }
 
     &--link {
       text-decoration: none;
       @include flexbox;
-      justify-content: flex-end;
-      // @include flexbox;
-      // align-items: center;
-      // border: none;
-      // background-color: $color-darkpink;
-      // border-radius: 50%;
     }
 
     &-word {

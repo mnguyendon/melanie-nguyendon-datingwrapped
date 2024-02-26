@@ -16,9 +16,32 @@ function PersonDetails({ currentPeople }) {
 
   return (
     <section className="person-details">
-      <h2 className="person-details__title">About</h2>
+      <div className="person-details__test">
+        <h2 className="person-details__title">About</h2>
+        <div className="item">
+          <Link className="item__button--link" to={`/`}>
+            <button className="item__delete-button">
+              <img alt="Delete Icon" src={deleteButton} />
+              <p className="item__delete-button-word">Delete</p>
+            </button>
+          </Link>
+          <Link
+            className="item__button--link"
+            to={`/past-dates/${person.id}/edit`}
+          >
+            <button className="item__edit-button">
+              <img alt="Edit Icon" src={editButton} />
+              <p className="item__edit-button-word">Edit</p>
+            </button>
+          </Link>
+        </div>
+      </div>
       <div className="person-details__container">
         <div className="person-details__subcontainer">
+          <div className="person-details__box">
+            <h3 className="person-details__category">Status:</h3>
+            <p className="person-details__content">{person.status}</p>
+          </div>
           <div className="person-details__box">
             <h3 className="person-details__category">Age:</h3>
             <p className="person-details__content">{person.age}</p>
@@ -27,6 +50,8 @@ function PersonDetails({ currentPeople }) {
             <h3 className="person-details__category">Height</h3>
             <p className="person-details__content">{person.height}</p>
           </div>
+        </div>
+        <div>
           <div className="person-details__box">
             <h3 className="person-details__category">Occupation</h3>
             <p className="person-details__content">{person.occupation}</p>
@@ -55,7 +80,7 @@ function PersonDetails({ currentPeople }) {
           </div>
         </div>
       </div>
-      <div className="item">
+      {/* <div className="item">
         <Link className="item__delete-button--link" to={`/`}>
           <button className="item__delete-button">
             <img alt="Delete Icon" src={deleteButton} />
@@ -71,7 +96,7 @@ function PersonDetails({ currentPeople }) {
             <p className="item__edit-button-word">Edit</p>
           </button>
         </Link>
-      </div>
+      </div> */}
     </section>
   );
 }
