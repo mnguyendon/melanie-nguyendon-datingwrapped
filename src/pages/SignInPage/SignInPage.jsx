@@ -1,4 +1,5 @@
 import "./SignInPage.scss";
+import { Link } from "react-router-dom";
 
 function SignInPage() {
   return (
@@ -6,8 +7,8 @@ function SignInPage() {
       <div className="main__wrap">
         <h1 className="main__header">DATING WRAPPED</h1>
         <p className="main__description">
-          Don't have an account?{" "}
-          <span className="main__description-register">Register here</span>
+          The site where you can{" "}
+          <span className="main__description-register">Register Here</span>
         </p>
       </div>
 
@@ -41,9 +42,11 @@ function SignInPage() {
             Password
           </label>
         </div>
-        <button type="submit" className="btn btn-primary btn-ghost">
-          SIGN IN
-        </button>
+        <Link to={`/`}>
+          <button type="submit" className="btn btn-primary btn-ghost">
+            SIGN IN
+          </button>
+        </Link>
       </form>
     </div>
   );

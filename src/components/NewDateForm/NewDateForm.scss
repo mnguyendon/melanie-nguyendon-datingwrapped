@@ -4,6 +4,11 @@
 @use "../../styles/partials/typography" as *;
 
 .form {
+  &__questions-wrap {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
   &__button {
     &-container {
       display: flex;

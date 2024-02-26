@@ -76,6 +76,7 @@
 
 .btn {
   padding: 8px 20px;
+  width: 100%;
   border-radius: 0;
 
   &:hover {
@@ -118,12 +119,12 @@
   }
 
   .btn {
-    width: 100%;
     font-weight: bold;
     color: $color-darkpink;
     background-color: white;
     border-radius: 1rem;
     border: 1px white solid;
+    padding: 0.5rem 7rem;
 
     @include tablet {
       margin: 18px 0 9px 0;
