@@ -6,6 +6,23 @@ import axios from "axios";
 // const { REACT_APP_API_BASE_PATH } = process.env;
 
 function NewDateForm() {
+  const [currentPeople, setCurrentPeople] = useState([]);
+
+  const apiUrl = "http://localhost:5050/past-dates";
+
+  const personData = async () => {
+    try {
+      const response = await axios.get(apiUrl);
+      const data = response.data;
+      setCurrentPeople(data);
+    } catch (error) {
+      console.error("error fetching person details", error);
+    }
+  };
+
+  useEffect(() => {
+    personData();
+  }, []);
   return (
     <>
       <main>
@@ -14,6 +31,16 @@ function NewDateForm() {
             <h2 className="form__section__title">New Date</h2>
             <div className="form__section">
               <div className="form__questions-container">
+                <div className="form__questions">
+                  <label htmlFor="category" className="form__label">
+                    Name
+                  </label>
+                  <select name="category" className="form__input">
+                    {currentPeople.map((person) => (
+                      <option>{person.name}</option>
+                    ))}
+                  </select>
+                </div>
                 <div className="form__questions">
                   <label className="form__label">Date</label>
                   <input
