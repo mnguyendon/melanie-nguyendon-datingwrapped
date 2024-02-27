@@ -3,7 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-// const { REACT_APP_API_BASE_PATH } = process.env;
 
 function NewDateForm() {
   const [currentPeople, setCurrentPeople] = useState([]);
@@ -71,17 +70,22 @@ function NewDateForm() {
             <div className="form__section">
               <div className="form__questions-wrap">
                 <div>
-                  <div className="form__questions">
+                  <div className="form__questions2">
                     <label htmlFor="category" className="form__label">
                       Name
                     </label>
                     <select id="name" name="category" className="form__input">
-                      {currentPeople.map((person) => (
-                        <option value={person.id}>{person.name}</option>
-                      ))}
+                      {currentPeople
+                        .slice()
+                        .sort((a, b) => a.name.localeCompare(b.name))
+                        .map((person) => (
+                          <option key={person.id} value={person.id}>
+                            {person.name}
+                          </option>
+                        ))}
                     </select>
                   </div>
-                  <div className="form__questions">
+                  <div className="form__questions2">
                     <label className="form__label">Date</label>
                     <input
                       id="date"
@@ -91,8 +95,7 @@ function NewDateForm() {
                       required
                     />
                   </div>
-
-                  <div className="form__questions">
+                  <div className="form__questions2">
                     <label htmlFor="item_name" className="form__label">
                       What did you do?
                     </label>
@@ -104,7 +107,7 @@ function NewDateForm() {
                       placeholder="Please enter a brief description..."
                     ></input>
                   </div>
-                  <div className="form__questions">
+                  <div className="form__questions2">
                     <label htmlFor="category" className="form__label">
                       Who Paid?
                     </label>
@@ -115,7 +118,7 @@ function NewDateForm() {
                       <option>No $$ Spent</option>
                     </select>
                   </div>
-                  <div className="form__questions">
+                  <div className="form__questions2">
                     <label className="form__label">Cry count</label>
                     <input
                       className="form__input"
@@ -128,7 +131,7 @@ function NewDateForm() {
                   </div>
                 </div>
                 <div>
-                  <div className="form__questions">
+                  <div className="form__questions2">
                     <label className="radio__label">
                       Did you meet their family?
                     </label>
@@ -148,7 +151,7 @@ function NewDateForm() {
                     />
                     {"No"}
                   </div>
-                  <div className="form__questions">
+                  <div className="form__questions2">
                     <label className="radio__label">
                       Did you meet their friends?
                     </label>
@@ -168,18 +171,7 @@ function NewDateForm() {
                     />
                     {"No"}
                   </div>
-                  {/* <div className="form__questions">
-                    <label className="form__label">Cry count</label>
-                    <input
-                      className="form__input"
-                      type="number"
-                      id="cry"
-                      name="cry"
-                      min="0"
-                      max="1000"
-                    />
-                  </div> */}
-                  <div className="form__questions">
+                  <div className="form__questions2">
                     <label htmlFor="category" className="form__label">
                       Who Ended Things?
                     </label>
@@ -188,11 +180,12 @@ function NewDateForm() {
                       <option>Me</option>
                       <option>Them</option>
                       <option>Mutual Ghosting</option>
+                      <option>Mutual Agreement</option>
                       <option>Third-Party</option>
                       <option>Still Ongoing</option>
                     </select>
                   </div>
-                  <div className="form__questions">
+                  <div className="form__questions2">
                     <label htmlFor="description" className="form__label">
                       Other Comments
                     </label>

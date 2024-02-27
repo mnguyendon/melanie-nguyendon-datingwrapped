@@ -38,6 +38,7 @@
 
     &-dw {
       margin: 0;
+      font-size: 2rem;
     }
   }
 
@@ -55,11 +56,19 @@
   }
 
   &__item {
+    display: flex;
     list-style: none;
     text-align: center;
   }
 
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
   &__button {
+    // display: flex;
     padding: 0.5rem 1rem;
     border: 2px white solid;
     color: white;

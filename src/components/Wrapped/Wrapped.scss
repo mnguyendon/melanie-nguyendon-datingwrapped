@@ -6,7 +6,7 @@
 .main {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  // padding: 1rem;
 
   @include tablet {
     flex-direction: row;
@@ -41,18 +41,27 @@
     display: flex;
     justify-content: center;
 
+    &__img {
+      width: 7rem;
+      height: 7rem;
+      margin-bottom: 1rem;
+    }
+
     &__button {
       border-radius: 2rem;
-      width: 15rem;
-      height: 15rem;
-
+      width: 20rem;
+      height: 20rem;
       padding: 0.5rem 2.5rem;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-      border: 2px white solid;
+      border: 4px pink solid;
       background-color: white;
       color: $color-darkpink;
       font-weight: bold;
+      font-size: 1.1rem;
+      box-shadow: 0 0.4px 0.4px rgba(128, 128, 128, 0.109),
+        0 1px 1px rgba(128, 128, 128, 0.155),
+        0 2.1px 2.1px rgba(128, 128, 128, 0.195),
+        0 4.4px 4.4px rgba(128, 128, 128, 0.241),
+        0 12px 12px rgba(128, 128, 128, 0.35);
     }
   }
 }

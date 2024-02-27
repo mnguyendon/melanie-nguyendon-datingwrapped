@@ -214,6 +214,7 @@ function PersonDetails({ currentPeople }) {
                 <option>South Asian</option>
                 <option>Southeast Asian</option>
                 <option>White/Caucasian</option>
+                <option>Other</option>
               </select>
             ) : (
               <p className="person-details__content">{personInfo.ethnicity}</p>

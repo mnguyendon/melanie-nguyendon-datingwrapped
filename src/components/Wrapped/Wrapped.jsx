@@ -3,6 +3,12 @@ import image from "../../assets/wallpapers/istockphoto-1132271518-612x612.jpg";
 import { Link, useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import weightlifter from "../../assets/icons/weightlifting.png";
+import crying from "../../assets/icons/crying.png";
+import talking from "../../assets/icons/chat-box.png";
+import heartbreak from "../../assets/icons/broken-heart.png";
+import date from "../../assets/icons/calendar.png";
+import couple from "../../assets/icons/kiss.png";
 
 function Wrapped() {
   const location = useLocation();
@@ -26,7 +32,7 @@ function Wrapped() {
   }, []);
 
   if (!wrappedInfo) {
-    return <div>No wrapped info</div>;
+    return <div>No information to wrap. Time to start dating again!</div>;
   }
 
   return (
@@ -34,52 +40,63 @@ function Wrapped() {
       <div className="main">
         <div className="main__container">
           <div className="content">
-            <div className="content__overlay"></div>
             <button className="content__button">
-              You went on {wrappedInfo.numOfFirstDates} first dates this year
+              <img className="content__img" src={date} />
+              <p>
+                You went on {wrappedInfo.numOfFirstDates} first dates this year
+              </p>
             </button>
           </div>
         </div>
         <div className="main__container">
           <div className="content">
-            <div className="content__overlay"></div>
             <button className="content__button">
-              Out of those {wrappedInfo.numOfFirstDates} dates,{" "}
-              {wrappedInfo.numGotToSecondDate} got to a second date
+              <img className="content__img" src={couple} />
+              <p>
+                {" "}
+                Out of those {wrappedInfo.numOfFirstDates} dates,{" "}
+                <span>{wrappedInfo.numGotToSecondDate}</span> got to a second
+                date
+              </p>
             </button>
           </div>
         </div>
         <div className="main__container">
           <div className="content">
-            <div className="content__overlay"></div>
             <button className="content__button">
-              You are in the {wrappedInfo.groupByStatus.Talking[0].status} stage
-              with 1 person
+              <img className="content__img" src={talking} />
+              <p>
+                You are in the {wrappedInfo.groupByStatus.Talking[0].status}{" "}
+                stage with 1 person(s)
+              </p>
             </button>
           </div>
         </div>
         <div className="main__container">
           <div className="content">
-            <div className="content__overlay"></div>
             <button className="content__button">
-              You ended {wrappedInfo.numEndedByMe} of all the dates
+              <img className="content__img" src={heartbreak} />
+              <p>You ended {wrappedInfo.numEndedByMe} of all the dates</p>
             </button>
           </div>
         </div>
         <div className="main__container">
           <div className="content">
-            <div className="content__overlay"></div>
             <button className="content__button">
-              {wrappedInfo.numMadeMeCry} person(s) made you cry this year
+              <img className="content__img" src={crying} />
+              <p>{wrappedInfo.numMadeMeCry} person(s) made you cry this year</p>
             </button>
           </div>
         </div>
         <div className="main__container">
           <div className="content">
-            <div className="content__overlay"></div>
             <button className="content__button">
-              You met {wrappedInfo.groupByMeeting["In the Wild"][0].name} in the
-              Wild and {wrappedInfo.groupByMeeting["Gym"][0].name} in the Gym
+              <img className="content__img" src={weightlifter} />
+              <p>
+                You met {wrappedInfo.groupByMeeting["In the Wild"][0].name} in
+                the Wild and {wrappedInfo.groupByMeeting["Gym"][0].name} in the
+                Gym
+              </p>
             </button>
           </div>
         </div>

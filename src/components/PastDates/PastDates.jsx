@@ -12,7 +12,10 @@ function PastDates() {
     try {
       const response = await axios.get(apiUrl);
       const data = response.data;
-      setCurrentPeople(data);
+      const sortedData = data
+        .slice()
+        .sort((a, b) => a.name.localeCompare(b.name));
+      setCurrentPeople(sortedData);
     } catch (error) {
       console.error("error fetching person details", error);
     }
@@ -27,7 +30,11 @@ function PastDates() {
       <div className="past-dates__container">
         <h2 className="past-dates__title">Past Dates</h2>
         {currentPeople.map((person) => (
-          <Link to={`/past-dates/${person.id}`} className="person__link">
+          <Link
+            key={person.id}
+            to={`/past-dates/${person.id}`}
+            className="person__link"
+          >
             <div className="person person-specific">
               <p className="person__category">{person.name}</p>
             </div>
