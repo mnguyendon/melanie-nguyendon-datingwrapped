@@ -35,6 +35,28 @@
   padding: 1rem 2rem;
   border: 0.5rem white double;
 
+  &__add {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    padding: 0.5rem 1rem;
+    border: 2px white solid;
+    color: white;
+    background-color: $color-darkpink;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 0.6rem;
+    max-width: 7rem;
+
+    &:hover {
+      color: $color-darkpink;
+      background-color: white;
+      border: 2px $color-darkpink solid;
+    }
+  }
+
   &__category {
     font-size: 0.75rem;
     padding: 1rem 0;

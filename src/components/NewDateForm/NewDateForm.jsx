@@ -1,6 +1,5 @@
 import "./NewDateForm.scss";
 import { useNavigate, Link } from "react-router-dom";
-
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
@@ -61,10 +60,11 @@ function NewDateForm() {
   useEffect(() => {
     personData();
   }, []);
+
   return (
     <>
       <main>
-        <form autocomplete="off" ref={formRef} onSubmit={submitForm}>
+        <form autoComplete="off" ref={formRef} onSubmit={submitForm}>
           <section className="form">
             <h2 className="form__title">New Date</h2>
             <div className="form__section">
@@ -105,7 +105,7 @@ function NewDateForm() {
                       name="item_name"
                       className="form__input"
                       placeholder="Please enter a brief description..."
-                    ></input>
+                    />
                   </div>
                   <div className="form__questions2">
                     <label htmlFor="category" className="form__label">
@@ -136,17 +136,20 @@ function NewDateForm() {
                       Did you meet their family?
                     </label>
                     <input
-                      id="family"
+                      id="family-yes"
                       type="radio"
                       name="family"
                       className="radio__button"
+                      value="Yes"
                       required
                     />
                     {"Yes"}
                     <input
+                      id="family-no"
                       type="radio"
                       name="family"
                       className="radio__button"
+                      value="No"
                       required
                     />
                     {"No"}
@@ -156,17 +159,20 @@ function NewDateForm() {
                       Did you meet their friends?
                     </label>
                     <input
-                      id="friend"
+                      id="friend-yes"
                       type="radio"
-                      name="friends"
+                      name="friend"
                       className="radio__button"
+                      value="Yes"
                       required
                     />
                     {"Yes"}
                     <input
+                      id="friend-no"
                       type="radio"
-                      name="friends"
+                      name="friend"
                       className="radio__button"
+                      value="No"
                       required
                     />
                     {"No"}
@@ -195,7 +201,7 @@ function NewDateForm() {
                       name="description"
                       className="form__input custom__input"
                       placeholder="Please enter a brief description..."
-                    ></textarea>
+                    />
                   </div>
                 </div>
               </div>

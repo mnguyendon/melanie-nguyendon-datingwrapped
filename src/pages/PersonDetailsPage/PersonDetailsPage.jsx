@@ -1,9 +1,8 @@
 import "./PersonDetailsPage.scss";
 import Header from "../../components/Header/Header";
 import PersonDetails from "../../components/PersonDetails/PersonDetails";
-import DateDetails from "../../components/DateDetails/DateDetails";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 function PersonDetailsPage() {
@@ -38,19 +37,16 @@ function PersonDetailsPage() {
     dateData();
   }, []);
 
-  const { id } = useParams(); // Get the id parameter from the URL using useParams
+  const { id } = useParams();
 
-  // Find the person with the matching id
   const person = currentPeople.find((person) => person.id === id);
 
-  // Filter date details for the current person
-  const personDateDetails = dateDetails.filter(
-    (detail) => detail["person-id"] === id
-  );
+  const sortedPersonDateDetails = dateDetails
+    .filter((detail) => detail["person-id"] === id)
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
 
-  // Check if person is found
   if (!person) {
-    return <div>Person not found</div>; // Display a message if person is not found
+    return <div>Person not found</div>;
   }
 
   return (
@@ -65,9 +61,14 @@ function PersonDetailsPage() {
         {/* <DateDetails dateDetails={personDateDetails} /> */}
       </section>
       <section className="prev-date">
-        <h2>All Dates with {person.name}</h2>
+        <div className="prev-date__add">
+          <h2>All Dates with {person.name}</h2>
+          <Link to={`/new-date`}>
+            <button className="prev-date__button">+ Add Date</button>
+          </Link>
+        </div>
         <div className="prev-date__container">
-          {personDateDetails.map((date) => (
+          {sortedPersonDateDetails.map((date) => (
             <div key={date.id} className="prev-date__category">
               <div className="prev-date__box">
                 <h3>Date</h3>

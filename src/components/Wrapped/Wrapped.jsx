@@ -66,7 +66,7 @@ function Wrapped() {
             <button className="content__button">
               <img className="content__img" src={talking} />
               <p>
-                You are in the {wrappedInfo.groupByStatus.Talking[0].status}{" "}
+                You are in the {wrappedInfo.groupByStatus?.Talking[0]?.status}{" "}
                 stage with 1 person(s)
               </p>
             </button>
@@ -92,11 +92,7 @@ function Wrapped() {
           <div className="content">
             <button className="content__button">
               <img className="content__img" src={weightlifter} />
-              <p>
-                You met {wrappedInfo.groupByMeeting["In the Wild"][0].name} in
-                the Wild and {wrappedInfo.groupByMeeting["Gym"][0].name} in the
-                Gym
-              </p>
+              <p>{wrappedInfo?.groupByMeeting["Gym"][0]?.name} in the Gym</p>
             </button>
           </div>
         </div>

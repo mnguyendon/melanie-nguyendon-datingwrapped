@@ -1,13 +1,14 @@
 import "./PersonDetails.scss";
 import editButton from "../../assets/icons/edit-24px white.svg";
 import deleteButton from "../..//assets/icons/delete_outline-24px.svg";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
 function PersonDetails({ currentPeople }) {
   const { id } = useParams();
   const person = currentPeople.find((person) => person.id === id);
+  const navigate = useNavigate();
 
   const [personInfo, setPersonInfo] = useState(person);
   const [editMode, setEditMode] = useState(false);
@@ -35,12 +36,27 @@ function PersonDetails({ currentPeople }) {
     }
   };
 
+  const deletePerson = async () => {
+    try {
+      const res = await axios.delete(
+        `http://localhost:5050/person/${personInfo.id}`
+      );
+      alert("Person deleted successfully");
+      navigate("/past-dates");
+    } catch (error) {
+      console.error("Error deleting person data:", error);
+    }
+  };
+
   return (
     <section className="person-details">
       <div className="person-details__test">
         <h2 className="person-details__title">About</h2>
         <div className="item">
-          <button className="item__button item__delete-button">
+          <button
+            className="item__button item__delete-button"
+            onClick={() => deletePerson()}
+          >
             <img alt="Delete Icon" src={deleteButton} />
             <p className="item__delete-button-word">Delete</p>
           </button>

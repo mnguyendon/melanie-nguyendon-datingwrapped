@@ -5,14 +5,12 @@ import deleteButton from "../../assets/icons/delete_outline-24px.svg";
 import { Link, useParams } from "react-router-dom";
 
 function DateDetails({ dateDetails }) {
-  const { id } = useParams(); // Get the id parameter from the URL using useParams
+  const { id } = useParams();
 
-  // Filter date details for the current person
   const personDateDetails = dateDetails.filter(
     (detail) => detail["person-id"] === id
   );
 
-  // Get the most recent date
   const mostRecentDate =
     personDateDetails.length > 0 ? personDateDetails[0] : null;
 
