@@ -92,7 +92,11 @@ function Wrapped() {
           <div className="content">
             <button className="content__button">
               <img className="content__img" src={weightlifter} />
-              <p>{wrappedInfo?.groupByMeeting["Gym"][0]?.name} in the Gym</p>
+              <p>
+                You met {wrappedInfo?.groupByMeeting["Dating App"].length}{" "}
+                people on Dating Apps and{" "}
+                {wrappedInfo?.groupByMeeting["Gym"].length} people at the Gym
+              </p>
             </button>
           </div>
         </div>
