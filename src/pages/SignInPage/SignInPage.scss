@@ -69,18 +69,8 @@
 
 .login-form {
   &__label {
-    padding-left: 0.5rem;
-    background-color: pink;
-  }
-}
-
-.btn {
-  padding: 8px 20px;
-  width: 100%;
-  border-radius: 0;
-
-  &:hover {
-    box-shadow: 0 0 20px 10px rgba(237, 107, 146, 0.5);
+    padding: 0 0.5rem;
+    background-color: $color-darkpink;
   }
 }
 
@@ -90,7 +80,7 @@
   align-items: center;
   padding: 50px 40px;
   color: white;
-  background: pink;
+  background: $color-medpink;
   margin: 0 2rem;
   // opacity: 50%;
   // background: rgba(0, 0, 0, 0.8);
@@ -104,7 +94,7 @@
 
   &__header {
     margin: 0 0 24px 0;
-    background-color: pink;
+    background-color: $color-medpink;
   }
 
   .form-input-material {
@@ -121,13 +111,17 @@
   .btn {
     font-weight: bold;
     color: $color-darkpink;
-    background-color: white;
+    background-color: $color-darkpink;
     border-radius: 1rem;
-    border: 1px white solid;
+    border: 1px $color-darkpink solid;
     padding: 0.5rem 7rem;
+    color: white;
 
     @include tablet {
       margin: 18px 0 9px 0;
+    }
+    &:hover {
+      box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.873);
     }
   }
 }

@@ -60,7 +60,7 @@ function PersonDetailsPage() {
       </section>
       <section className="prev-date">
         <div className="prev-date__add">
-          <h2>All Dates with {person.name}</h2>
+          <h2 className="prev-date__head">All Dates with {person.name}</h2>
           <Link to={`/new-date`}>
             <button className="prev-date__button">+ Add Date</button>
           </Link>
@@ -70,31 +70,31 @@ function PersonDetailsPage() {
             <div key={date.id} className="prev-date__category">
               <div className="prev-date__box">
                 <h3>Date</h3>
-                <p>{date.date}</p>
+                <p className="prev-date__content">{date.date}</p>
               </div>
               <div className="prev-date__box">
                 <h3>Activity</h3>
-                <p>{date.activity}</p>
+                <p className="prev-date__content">{date.activity}</p>
               </div>
               <div className="prev-date__box">
                 <h3>Paid</h3>
-                <p>{date.paid}</p>
+                <p className="prev-date__content">{date.paid}</p>
               </div>
               <div className="prev-date__box">
                 <h3>Met Family?</h3>
-                <p>{date.family}</p>
+                <p className="prev-date__content">{date.family}</p>
               </div>
               <div className="prev-date__box">
                 <h3>Met Friends?</h3>
-                <p>{date.friend}</p>
+                <p className="prev-date__content">{date.friend}</p>
               </div>
               <div className="prev-date__box">
                 <h3>Cry Count</h3>
-                <p>{date.cry}</p>
+                <p className="prev-date__content">{date.cry}</p>
               </div>
               <div className="prev-date__box">
                 <h3>Other</h3>
-                <p>{date.other}</p>
+                <p className="prev-date__content">{date.other}</p>
               </div>
             </div>
           ))}

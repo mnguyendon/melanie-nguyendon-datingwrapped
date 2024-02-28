@@ -5,21 +5,25 @@
 
 .person {
   display: flex;
-  gap: 2rem;
-  justify-content: space-evenly;
+  // width: 50%;
+  justify-content: center;
+  background-color: $color-lightpink;
+  // background-color: black;
 
   &-specific:hover {
-    box-shadow: inset 0 0 0 1000px rgba(172, 144, 157, 0.2);
+    box-shadow: inset 0 0 0 1000px #dca1ac41;
     color: white;
   }
 
   &__link {
     text-decoration: none;
+    background-color: $color-lightpink;
+    // padding-right: 40vw;
   }
 
   &__category {
     color: $color-darkpink;
-    max-width: 2rem;
+
     font-size: 2rem;
 
     &:hover {
@@ -32,11 +36,22 @@
   &__title {
     color: $color-darkpink;
     font-size: 3.5rem;
-    padding-left: 2rem;
+    padding: 0 11.5rem;
+    background-color: $color-lightpink;
   }
 
   &__container {
+    display: flex;
     background-color: $color-lightpink;
     border: 0.5rem white double;
   }
+
+  &__image {
+    border-left: 1rem $color-medpink double;
+    width: 50%;
+  }
+}
+
+.test {
+  display: flex;
 }

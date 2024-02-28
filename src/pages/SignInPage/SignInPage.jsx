@@ -17,6 +17,9 @@ function SignInPage() {
       <form className="login-form">
         <h2 className="login-form__header">SIGN IN</h2>
         <div className="form-input-material">
+          <label className="login-form__label" for="username">
+            Username
+          </label>
           <input
             type="text"
             name="username"
@@ -26,11 +29,14 @@ function SignInPage() {
             className="form-control-material"
             required
           />
-          <label className="login-form__label" for="username">
+          {/* <label className="login-form__label" for="username">
             Username
-          </label>
+          </label> */}
         </div>
         <div className="form-input-material">
+          <label className="login-form__label" for="password">
+            Password
+          </label>
           <input
             type="password"
             name="password"
@@ -40,9 +46,9 @@ function SignInPage() {
             className="form-control-material"
             required
           />
-          <label className="login-form__label" for="password">
+          {/* <label className="login-form__label" for="password">
             Password
-          </label>
+          </label> */}
         </div>
         <Link to={`/`}>
           <button type="submit" className="btn btn-primary btn-ghost">

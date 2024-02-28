@@ -12,7 +12,7 @@
   &__test {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   &__title {
@@ -59,7 +59,7 @@
     border: none;
 
     &:hover {
-      color: pink;
+      color: $color-medpink;
     }
 
     &--link {
@@ -76,7 +76,7 @@
     border-radius: 10rem;
 
     &:hover {
-      background-color: pink;
+      background-color: $color-medpink;
       color: $color-darkpink;
     }
 

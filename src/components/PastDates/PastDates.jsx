@@ -2,6 +2,7 @@ import "./PastDates.scss";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
+import couple from "../../assets/wallpapers/mindy-sabiston-9hgDf95TNO8-unsplash.jpg";
 
 function PastDates() {
   const [currentPeople, setCurrentPeople] = useState([]);
@@ -27,19 +28,24 @@ function PastDates() {
 
   return (
     <section className="past-dates">
-      <div className="past-dates__container">
-        <h2 className="past-dates__title">Past Dates</h2>
-        {currentPeople.map((person) => (
-          <Link
-            key={person.id}
-            to={`/past-dates/${person.id}`}
-            className="person__link"
-          >
-            <div className="person person-specific">
-              <p className="person__category">{person.name}</p>
-            </div>
-          </Link>
-        ))}
+      <div className="test">
+        <div>
+          <h2 className="past-dates__title">Past Dates</h2>
+          <div>
+            {currentPeople.map((person) => (
+              <Link
+                key={person.id}
+                to={`/past-dates/${person.id}`}
+                className="person__link"
+              >
+                <div className="person person-specific">
+                  <p className="person__category">{person.name}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <img className="past-dates__image" src={couple} />
       </div>
     </section>
   );

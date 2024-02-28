@@ -6,7 +6,7 @@
 .person-profile {
   background-color: $color-lightpink;
   padding: 0 3rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   display: flex;
   justify-content: space-evenly;
 
@@ -31,9 +31,17 @@
 }
 
 .prev-date {
-  background-color: pink;
+  background-color: $color-medpink;
   padding: 1rem 2rem;
   border: 0.5rem white double;
+
+  &__head {
+    color: white;
+  }
+
+  &__content {
+    color: white;
+  }
 
   &__add {
     display: flex;

@@ -6,6 +6,10 @@
 .form {
   position: relative;
 
+  &__input {
+    border: 1.5px $color-medpink solid;
+  }
+
   &__questions-wrap {
     display: flex;
     justify-content: space-evenly;
@@ -66,5 +70,8 @@
 .radio {
   &__button {
     margin-left: 1rem;
+    margin-right: 0.25rem;
+    // outline: 1px $color-darkpink solid;
+    // border-radius: 100%;
   }
 }

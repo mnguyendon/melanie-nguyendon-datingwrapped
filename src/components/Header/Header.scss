@@ -4,12 +4,13 @@
 @use "../../styles/partials/typography" as *;
 
 .header {
-  background-color: pink;
+  background-color: #ff889c;
   @include tablet {
     height: 5.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 3px white solid;
   }
 
   &__navigation {
