@@ -66,7 +66,8 @@ function Wrapped() {
               <img className="content__img" src={talking} />
               <p>
                 You are in the {wrappedInfo.groupByStatus?.Talking[0]?.status}{" "}
-                stage with 1 of your dates
+                stage with {wrappedInfo.groupByStatus?.Talking.length} of your
+                dates
               </p>
             </button>
           </div>
