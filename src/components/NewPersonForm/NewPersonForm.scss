@@ -6,6 +6,7 @@
 form {
   background-color: $color-lightpink;
   padding: 2rem 0;
+  position: relative;
   //   margin-top: 0;
 }
 
@@ -59,28 +60,35 @@ form {
     }
 
     &-cancel {
-      padding: 0.5rem 1rem;
+      position: absolute;
+      top: -6.5%;
+      left: 97.5%;
       font-weight: bold;
-      color: $color-darkpink;
-      background-color: $color-lightpink;
-      border-radius: 1.5rem;
-      border: none;
+      font-size: 1.5rem;
+      color: white;
+      background-color: $color-darkpink;
+      border-radius: 50%;
+      border: 0.25rem $color-darkpink solid;
+      width: 4rem;
+      height: 4rem;
 
       &:hover {
-        color: white;
+        background-color: white;
+        color: $color-darkpink;
       }
     }
 
     &-submit {
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 2.5rem;
       font-weight: bold;
-      color: $color-darkpink;
-      background-color: white;
+      color: white;
+      background-color: $color-darkpink;
       border-radius: 1.5rem;
       border: 1px white solid;
+      font-size: 2rem;
 
       &:hover {
-        box-shadow: 0 0 20px 10px rgba(237, 107, 146, 0.5);
+        box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.873);
       }
     }
   }

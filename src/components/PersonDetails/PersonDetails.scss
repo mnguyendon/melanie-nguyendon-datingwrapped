@@ -40,6 +40,8 @@
 }
 
 .item {
+  display: flex;
+  gap: 1rem;
   &__button {
     display: flex;
     align-items: center;
@@ -56,6 +58,10 @@
     background-color: white;
     border: none;
 
+    &:hover {
+      color: pink;
+    }
+
     &--link {
       display: flex;
       align-content: flex-end;
@@ -68,6 +74,11 @@
     border: none;
     background-color: $color-darkpink;
     border-radius: 10rem;
+
+    &:hover {
+      background-color: pink;
+      color: $color-darkpink;
+    }
 
     @include tablet {
       border-radius: 20px;

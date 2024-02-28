@@ -64,9 +64,19 @@ function NewDateForm() {
   return (
     <>
       <main>
-        <form autoComplete="off" ref={formRef} onSubmit={submitForm}>
+        <form
+          className="fix"
+          autoComplete="off"
+          ref={formRef}
+          onSubmit={submitForm}
+        >
           <section className="form">
             <h2 className="form__title">New Date</h2>
+            <Link className="item__cancel-button--link" to={`/`}>
+              <button type="cancel" className="form__button-cancel">
+                X
+              </button>
+            </Link>
             <div className="form__section">
               <div className="form__questions-wrap">
                 <div>
@@ -209,12 +219,12 @@ function NewDateForm() {
           </section>
 
           <div className="form__button-container">
-            <Link className="item__cancel-button--link" to={`/`}>
+            {/* <Link className="item__cancel-button--link" to={`/`}>
               <button type="cancel" className="form__button-cancel">
-                CANCEL
+                X
               </button>
-            </Link>
-            <button type="submit" className="form__button-submit">
+            </Link> */}
+            <button type="submit" className="form__button-submit2">
               SUBMIT
             </button>
           </div>

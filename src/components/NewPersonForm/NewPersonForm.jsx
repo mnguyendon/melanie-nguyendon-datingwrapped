@@ -58,6 +58,11 @@ function NewPersonForm() {
         >
           <section className="form">
             <h2 className="form__title">New Person</h2>
+            <Link className="item__cencel-button--link" to={`/`}>
+              <button type="cancel" className="form__button-cancel">
+                X
+              </button>
+            </Link>
             <div className="form__container">
               <div className="form__section">
                 <div className="form__questions-container">
@@ -339,11 +344,11 @@ function NewPersonForm() {
             </div>
           </section>
           <div className="form__button-container">
-            <Link className="item__cencel-button--link" to={`/`}>
+            {/* <Link className="item__cencel-button--link" to={`/`}>
               <button type="cancel" className="form__button-cancel">
                 CANCEL
               </button>
-            </Link>
+            </Link> */}
             <button type="submit" className="form__button-submit">
               SUBMIT
             </button>

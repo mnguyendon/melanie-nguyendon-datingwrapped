@@ -54,11 +54,9 @@ function PersonDetailsPage() {
       <Header />
       <div className="person-profile__head">
         <h1 className="person-profile__title">{person.name}</h1>
-        {/* <p className="person-profile__status">{person.status}</p> */}
       </div>
       <section className="person-profile">
         <PersonDetails currentPeople={currentPeople} />
-        {/* <DateDetails dateDetails={personDateDetails} /> */}
       </section>
       <section className="prev-date">
         <div className="prev-date__add">
