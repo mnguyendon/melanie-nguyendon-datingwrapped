@@ -31,8 +31,6 @@
       0 4.4px 4.4px rgba(128, 128, 128, 0.241),
       0 12px 12px rgba(128, 128, 128, 0.35);
 
-    // max-width: 2rem;
-
     &:hover {
       box-shadow: 0 0 20px 10px rgba(246, 116, 133, 0.873);
     }
@@ -52,7 +50,6 @@
 
     &--head {
       padding-bottom: 3rem;
-      // font-size: 4rem;
     }
 
     &-image {
@@ -79,158 +76,3 @@
     position: relative;
   }
 }
-
-// .heart__text {
-//   font-size: 0.6rem;
-//   display: flex;
-//   text-align: center;
-//   align-content: center;
-
-//   color: white;
-//   position: relative;
-//   max-width: 7rem;
-//   top: 22%;
-//   left: 22%;
-
-//   border-radius: 1rem;
-//   padding: 0.25rem;
-
-//   &:hover {
-//     color: $color-darkpink;
-//   }
-// }
-
-// .heart__link {
-//   text-decoration: none;
-// }
-
-// .heart__wrapper {
-//   width: 200px;
-//   height: 200px;
-//   position: relative;
-// }
-
-// /* Heart Style */
-// .heart {
-//   position: absolute;
-//   height: 100px;
-//   width: 100px;
-//   background-color: $color-darkpink;
-//   top: 50px;
-//   left: 50px;
-//   border: none;
-//   transform: rotate(45deg);
-// }
-
-// .heart:focus {
-//   outline: none;
-// }
-
-// .heart::before,
-// .heart::after {
-//   content: "";
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-//   background-color: $color-darkpink;
-//   border-radius: 50%;
-// }
-
-// .heart::before {
-//   top: -50px;
-//   left: 0;
-// }
-
-// .heart::after {
-//   top: 0;
-//   left: -50px;
-// }
-
-// /* Beat Style */
-// .heart__beat {
-//   height: 100px;
-//   width: 100px;
-//   background-color: $color-darkpink;
-//   position: absolute;
-//   top: 50px;
-//   left: 50px;
-//   transform: rotate(45deg);
-//   transition: all 0.2s;
-// }
-
-// .heart__beat::before,
-// .heart__beat::after {
-//   content: "";
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-//   background-color: $color-darkpink;
-//   border-radius: 50%;
-// }
-
-// .heart__beat::before {
-//   top: -50px;
-//   left: 0;
-// }
-
-// .heart__beat::after {
-//   top: 0;
-//   left: -50px;
-// }
-
-// /* Heart beat effect */
-// .heart__beat:hover {
-//   transform: rotate(45deg) scale(1.2);
-//   opacity: 0;
-//   cursor: pointer;
-// }
-
-// .home {
-//   background-color: $color-lightpink;
-//   // background-image: url(../../assets/wallpapers/heartwallpaper.jpeg);
-//   display: flex;
-//   flex-direction: column;
-//   gap: 2rem;
-//   align-items: center;
-
-//   @include tablet {
-//     flex-direction: row;
-//     justify-content: center;
-//     gap: 8rem;
-//   }
-
-// &__button {
-//   background-color: white;
-//   // background-image: url(../../assets/wallpapers/istockphoto-1132271518-612x612.jpg);
-//   // object-fit: fill;
-//   font-weight: bold;
-//   font-size: 1rem;
-//   border-radius: 50%;
-//   height: 15rem;
-//   width: 15rem;
-//   border: none;
-//   // color: $color-darkpink;
-
-//   &:hover {
-//     box-shadow: 0 0 20px 10px rgba(237, 107, 146, 0.5);
-//   }
-
-//   &-person {
-//     margin-top: 2rem;
-
-//     @include tablet {
-//       margin: 11rem 0;
-//       padding: 5rem;
-//     }
-//   }
-
-//   &-date {
-//     margin-bottom: 2rem;
-
-//     @include tablet {
-//       margin: 11rem 0;
-//       padding: 5rem;
-//     }
-//   }
-// }
-// }

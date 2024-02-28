@@ -4,7 +4,7 @@
 @use "../../styles/partials/typography" as *;
 
 .header {
-  background-color: #ff889c;
+  background-color: $color-medpink;
   @include tablet {
     height: 5.75rem;
     display: flex;
@@ -69,7 +69,6 @@
   }
 
   &__button {
-    // display: flex;
     padding: 0.5rem 1rem;
     border: 2px white solid;
     color: white;
@@ -81,14 +80,6 @@
       color: $color-darkpink;
       background-color: white;
       border: 2px $color-darkpink solid;
-    }
-
-    &.active {
-      //   @include navlink-active;
-
-      @include tablet {
-        // padding: 0.5rem 1rem;
-      }
     }
 
     @include tablet {

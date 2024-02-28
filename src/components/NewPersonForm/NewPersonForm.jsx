@@ -3,10 +3,6 @@ import React, { useRef } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 
-// import { useState, useEffect } from "react";
-// import axios from "axios";
-// const { REACT_APP_API_BASE_PATH } = process.env;
-
 function NewPersonForm() {
   const formRef = useRef();
   const navigate = useNavigate();
@@ -154,97 +150,9 @@ function NewPersonForm() {
                       <option>In the Wild</option>
                     </select>
                   </div>
-                  {/* <div className="form__questions">
-                    <label htmlFor="item_name" className="form__label">
-                      Occupation
-                    </label>
-                    <input
-                      id="occupation"
-                      type="text"
-                      name="item_name"
-                      className="form__input"
-                      placeholder="Occupation"
-                    ></input>
-                  </div>
-                  <div className="form__questions">
-                    <label htmlFor="category" className="form__label">
-                      Starsign
-                    </label>
-                    <select
-                      id="starsign"
-                      name="category"
-                      className="form__input"
-                    >
-                      <option>Please Select</option>
-                      <option>Capricorn</option>
-                      <option>Aquarius</option>
-                      <option>Pisces</option>
-                      <option>Aries</option>
-                      <option>Taurus</option>
-                      <option>Gemini</option>
-                      <option>Cancer</option>
-                      <option>Leo</option>
-                      <option>Virgo</option>
-                      <option>Libra</option>
-                      <option>Scorpio</option>
-                      <option>Sagittarius</option>
-                      <option>Not Sure</option>
-                    </select>
-                  </div>
-                  <div className="form__questions">
-                    <label htmlFor="category" className="form__label">
-                      Ethnicity
-                    </label>
-                    <select
-                      id="ethnicity"
-                      name="category"
-                      className="form__input"
-                    >
-                      <option>Please Select</option>
-                      <option>Aboriginal/Indigenous</option>
-                      <option>Black/African Descent</option>
-                      <option>East Asian</option>
-                      <option>Hispanic/Latino</option>
-                      <option>Middle Eastern</option>
-                      <option>Native Hawaiian/Pacific Islander</option>
-                      <option>South Asian</option>
-                      <option>Southeast Asian</option>
-                      <option>White/Caucasian</option>
-                      <option>Other</option>
-                    </select>
-                  </div> */}
                 </div>
               </div>
               <div className="form__section">
-                {/* <div className="form__questions">
-                  <label htmlFor="category" className="form__label">
-                    Status
-                  </label>
-                  <select id="status" name="category" className="form__input">
-                    <option>Please Select</option>
-                    <option>Talking</option>
-                    <option>Complicated</option>
-                    <option>FWB</option>
-                    <option>Friends</option>
-                    <option>Exclusive</option>
-                    <option>Over</option>
-                  </select>
-                </div>
-                <div className="form__questions">
-                  <label htmlFor="category" className="form__label">
-                    How Did You Meet?
-                  </label>
-                  <select id="met" name="category" className="form__input">
-                    <option>Please Select</option>
-                    <option>Dating App</option>
-                    <option>Mutual Friend</option>
-                    <option>School</option>
-                    <option>Work</option>
-                    <option>Gym</option>
-                    <option>Bar/Club</option>
-                    <option>In the Wild</option>
-                  </select>
-                </div> */}
                 <div className="form__questions">
                   <label htmlFor="item_name" className="form__label">
                     Occupation
@@ -344,11 +252,6 @@ function NewPersonForm() {
             </div>
           </section>
           <div className="form__button-container">
-            {/* <Link className="item__cencel-button--link" to={`/`}>
-              <button type="cancel" className="form__button-cancel">
-                CANCEL
-              </button>
-            </Link> */}
             <button type="submit" className="form__button-submit">
               SUBMIT
             </button>

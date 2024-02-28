@@ -5,10 +5,8 @@
 
 .person {
   display: flex;
-  // width: 50%;
   justify-content: center;
   background-color: $color-lightpink;
-  // background-color: black;
 
   &-specific:hover {
     box-shadow: inset 0 0 0 1000px #dca1ac41;
@@ -18,7 +16,6 @@
   &__link {
     text-decoration: none;
     background-color: $color-lightpink;
-    // padding-right: 40vw;
   }
 
   &__category {

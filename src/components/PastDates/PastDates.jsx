@@ -1,6 +1,6 @@
 import "./PastDates.scss";
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import couple from "../../assets/wallpapers/mindy-sabiston-9hgDf95TNO8-unsplash.jpg";
 

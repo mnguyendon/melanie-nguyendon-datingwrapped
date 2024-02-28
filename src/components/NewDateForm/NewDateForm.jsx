@@ -219,11 +219,6 @@ function NewDateForm() {
           </section>
 
           <div className="form__button-container">
-            {/* <Link className="item__cancel-button--link" to={`/`}>
-              <button type="cancel" className="form__button-cancel">
-                X
-              </button>
-            </Link> */}
             <button type="submit" className="form__button-submit2">
               SUBMIT
             </button>

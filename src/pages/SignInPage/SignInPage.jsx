@@ -29,9 +29,6 @@ function SignInPage() {
             className="form-control-material"
             required
           />
-          {/* <label className="login-form__label" for="username">
-            Username
-          </label> */}
         </div>
         <div className="form-input-material">
           <label className="login-form__label" for="password">

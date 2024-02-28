@@ -1,6 +1,5 @@
 import "./Wrapped.scss";
-import image from "../../assets/wallpapers/istockphoto-1132271518-612x612.jpg";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import weightlifter from "../../assets/icons/weightlifting.png";

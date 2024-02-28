@@ -28,11 +28,9 @@
     &-container {
       display: flex;
       justify-content: center;
-      // gap: 5rem;
     }
 
     &-cancel {
-      // padding: 0.5rem 2.5rem;
       position: absolute;
       top: 1%;
       left: 94%;
@@ -58,7 +56,6 @@
       border-radius: 1.5rem;
       border: 1px white solid;
       font-size: 2rem;
-      // margin-right: 0 auto;
 
       &:hover {
         box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.873);
@@ -71,7 +68,5 @@
   &__button {
     margin-left: 1rem;
     margin-right: 0.25rem;
-    // outline: 1px $color-darkpink solid;
-    // border-radius: 100%;
   }
 }

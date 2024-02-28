@@ -1,7 +1,6 @@
 import "./HomePage.scss";
 import Header from "../../components/Header/Header";
-// import Footer from "../../components/Footer/Footer";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import heart from "../../assets/wallpapers/heart.png";
 import cheers from "../../assets/icons/cheers.png";
 import user from "../../assets/icons/user (1).png";

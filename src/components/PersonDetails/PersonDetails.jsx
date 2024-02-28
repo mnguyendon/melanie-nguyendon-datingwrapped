@@ -1,7 +1,7 @@
 import "./PersonDetails.scss";
 import editButton from "../../assets/icons/edit-24px white.svg";
 import deleteButton from "../..//assets/icons/delete_outline-24px.svg";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
