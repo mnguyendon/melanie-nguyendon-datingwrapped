@@ -3,6 +3,10 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
+body {
+  background-color: $color-lightpink;
+}
+
 .home {
   background-color: $color-lightpink;
   display: flex;
@@ -17,7 +21,8 @@
   }
 
   &__button {
-    padding: 1.5rem;
+    padding: 1rem;
+    padding-top: 1.5rem;
     font-size: 2rem;
     font-weight: bold;
     background-color: white;
@@ -62,13 +67,19 @@
   &__text {
     display: flex;
     text-align: center;
-    max-width: 13rem;
+    max-width: 15rem;
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: 1.5rem;
     position: absolute;
-    top: 42%;
-    left: 30%;
+    top: 34.5%;
+    left: 27%;
+
+    &:hover {
+      // color: $color-darkpink;
+      text-shadow: #ffffff 1px 0 10px;
+    }
   }
 
   &__link {

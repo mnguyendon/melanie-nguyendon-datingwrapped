@@ -14,8 +14,14 @@ function SignInPage() {
         </p>
       </div>
 
-      <form className="login-form">
+      <form autocomplete="off" className="login-form">
         <h2 className="login-form__header">SIGN IN</h2>
+        <p className="login-form__register">
+          Don't have an account?{" "}
+          <Link to={`/register`} className="login-form__register--link">
+            <span className="login-form__register1">Register here</span>
+          </Link>
+        </p>
         <div className="form-input-material">
           <label className="login-form__label" for="username">
             Username

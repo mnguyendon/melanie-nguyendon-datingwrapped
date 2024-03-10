@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage/HomePage";
 import SignInPage from "./pages/SignInPage/SignInPage";
-// import AllMonthsPage from "./pages/AllMonthsPage/AllMonthsPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import NewDateFormPage from "./pages/NewDateFormPage/NewDateFormPage";
 import NewPersonFormPage from "./pages/NewPersonFormPage/NewPersonFormPage";
 import PersonDetailsPage from "./pages/PersonDetailsPage/PersonDetailsPage";
@@ -22,7 +22,7 @@ function App() {
         <Route path="/past-dates" element={<PastDatesPage />} />
         <Route path="/past-dates/:id" element={<PersonDetailsPage />} />
         <Route path="/wrapped" element={<WrappedPage />} />
-        {/* <Route path="/register" element={<RegisterPage />} /> */}
+        <Route path="/register" element={<RegisterPage />} />
         {/* <Route path="/all-months" element={<AllMonthsPage />} /> */}
       </Routes>
     </BrowserRouter>
